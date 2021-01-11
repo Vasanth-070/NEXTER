@@ -2,4 +2,65 @@
 {
     background-color: $color-secondary;
     grid-column: col-start 7 / full-end;
+    @media only screen and (max-width:$bp-medium)
+    {
+       grid-column: 1 / -1;
+       grid-row: 3 / 4;
+       padding: 2rem 0;
+    }
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    &__header
+    {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__user
+    {
+        &--photo
+        {
+            width: 7rem;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+    &__details
+    {
+        &--name
+        {
+            color: $color-grey-light-1;
+            font-size: 1.8rem;
+            font-weight: 400;
+        }
+        &--property
+        {
+            color: $color-grey-light-2;
+            font-size: 1.2rem;
+        }
+    }
+}
+.real
+{
+    display: grid;
+    @media only screen and (max-width:$bp-medium)
+        {
+           display: flex;
+           align-items: center;
+           width: 100%;
+           padding: 2rem 3.5rem;
+        // grid-template-columns: repeat(3,min-content max-content);
+        // grid-template-rows: min-content
+        }
+        @media only screen and (max-width:$bp-small)
+        {
+            display: grid;
+            padding: unset;
+        }
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+    grid-column-gap: 2rem;
+    grid-template-rows: repeat(4,min-content);
 }

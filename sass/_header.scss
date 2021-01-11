@@ -2,4 +2,68 @@
 {
     background-color: $color-grey-dark-1;
     grid-column: full-start / col-end 6;
+    @media only screen and (max-width:$bp-medium)
+    {
+       grid-column: 1 / -1;
+    }
+    @media only screen and (max-width:$bp-small)
+    {
+        padding: 3rem;
+    }
+
+    background-image: linear-gradient(rgba($color-secondary,.95),rgba($color-secondary,.95)), url(images/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+     padding: 8rem;
+    
+    padding-top: 4rem;
+
+    display: grid;
+    grid-template-rows: 1fr repeat(2,minmax(min-content,max-content)) 1fr repeat(2,minmax(min-content,max-content)) ;
+    grid-row-gap: 2.5rem;
+    &__logo
+    {
+        height: 3.5rem;
+        justify-self: center;
+    }
+    &__seenon
+    {
+        &--text
+        {
+            color: $color-grey-light-2;
+            font-size: 1.6rem;
+
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            align-items: center;
+            grid-gap: 1rem;
+
+            &::before,
+            &::after
+            {
+                content: "";
+                height: 1px;
+                background-color: currentColor;
+            }
+        }
+        &--logos
+        {
+            display: grid;
+            grid-gap: 1.5rem;
+            justify-items:center;
+            align-items: center;
+            grid-template-columns: repeat(4,minmax(min-content,1fr));
+            img
+            {
+                max-height: 2.5rem;
+                max-width: 100%;
+                filter: brightness(70%);
+            }
+        }
+    }
+    &__button
+    {
+        align-self: start;
+        justify-self: start;
+    }
 }

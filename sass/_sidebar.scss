@@ -3,4 +3,48 @@
     background-color: $color-primary;
     grid-column: side-start / side-end;
     grid-row: 1 / -1;
+    @media only screen and (max-width:$bp-large)
+    {
+       grid-row: 1 / span 1;
+       grid-column: 1 / -1;
+       display: flex;
+       justify-content: flex-end;
+    }
+    &__element
+    {
+        margin: 4rem 0;
+        margin-right: auto;
+        margin-left: auto;
+        height: 2px;
+        width: 4.5rem;
+        position: relative;
+        background-color: #fff;
+        &::after,
+        &::before{
+            display: block;
+            content: "";
+            height: 2px;
+            width: 4.5rem;
+            position: absolute;
+            left: 0;
+            background-color: #fff;
+        }
+        &::after
+        {   
+            top: -1.39rem;   
+        }
+        &::before
+        {
+            top: 1.3rem;
+        }
+
+        @media only screen and (max-width:$bp-large)
+    {
+        margin: 2rem 0;
+       margin-right: 2rem;
+
+    }
+    }
+    
+
 }

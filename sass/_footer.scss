@@ -3,3 +3,60 @@
     background-color:$color-secondary ;
     grid-column: full-start / full-end;
 }
+.navigation
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    grid-gap: 3rem;
+    list-style: none;
+    align-items: center;
+    font-size: 1.4rem;
+    padding: 4rem 3.5rem;
+    // &__items
+    // {
+    //     padding: 2rem 1rem;
+    //     text-align: center;
+    //     font-family: $font-display
+    // }
+    &__link,
+    &__link:link,
+    &__link:visited{
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;  
+        transition: all .2s;
+        display: block;
+        padding: 2rem 1rem;
+        text-align: center;
+        font-family: $font-display
+    }
+    &__link:hover,
+    &__link:active {
+        background-color: rgba(#fff,.05);
+        transform: translateY(-3px);
+    }
+}
+.copyright
+{
+    padding: 1.5rem 1rem;
+    margin-bottom: 5rem;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: $color-grey-light-2;
+    span
+    {
+        text-transform: uppercase;
+        transition: all .2s;
+        display: inline-block;
+        z-index: 10;
+        cursor: pointer;
+        
+    }
+    span:hover
+    {
+        color: yellow;
+    }
+}

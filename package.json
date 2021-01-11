@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/nexter-main.scss nexter.css -w",
-    "developer": "live-server  --browser=firefox",
+    "developer": "live-server",
     "start": "npm-run-all --parallel developer watch:sass ",
     "compile:sass": "node-sass sass/nexter-main.scss nexter.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' nexter.comp.css -o nexter.prefix.css",
